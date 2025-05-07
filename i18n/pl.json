@@ -1,0 +1,131 @@
+{
+  "language": "Polski",
+  "modelThinking": "Myślenie...",
+  "modelThinkingComplete": "Myślenie zakończone",
+  "invalidStructuredOutput": "Model zwrócił niekompletne lub nieprawidłowe dane, których nie można przetworzyć. Spróbuj użyć większego lub „mądrzejszego” modelu.",
+  "index": {
+    "projectDescription": "To jest interfejs webowy dla {0}, który pozwala AI przeszukiwać internet i samodzielnie zgłębiać temat na podstawie konkretnych pytań, a następnie generować raport badawczy.\nProjekt oferuje strumieniowe odpowiedzi AI w czasie rzeczywistym oraz wizualizację procesu badawczego w formie struktury drzewa.\nWszystkie zapytania API są wysyłane bezpośrednio z Twojej przeglądarki. Żadne dane nie są przechowywane zdalnie.",
+    "missingConfigTitle": "Brak konfiguracji",
+    "missingConfigDescription": "Projekt wymaga podania własnych kluczy API."
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "disclaimer": "Ustawienia są przechowywane lokalnie w Twojej przeglądarce.",
+    "save": "Zapisz",
+    "ai": {
+      "provider": "Dostawca AI",
+      "apiKey": "Klucz API",
+      "apiBase": "Bazowy URL API",
+      "model": "Model",
+      "contextSize": "Długość kontekstu",
+      "contextSizeHelp": "Maksymalna liczba tokenów przesyłana do modelu. Nie może przekroczyć limitu kontekstu danego modelu.",
+      "providers": {
+        "openaiCompatible": {
+          "title": "Zgodne z OpenAI",
+          "description": "Każdy dostawca zgodny z API OpenAI. Uwaga: niektórzy dostawcy oferują własne opcje poprawiające wydajność."
+        },
+        "siliconflow": {
+          "title": "SiliconFlow",
+          "description": "Oferuje 14 ¥ darmowych kredytów po rejestracji. Klucz API uzyskasz na stronie {0}."
+        },
+        "infiniai": {
+          "title": "Infiniai",
+          "description": "Po rejestracji możesz korzystać z pełnej mocy modelu DeepSeek R1 i innych modeli z przyspieszonym wnioskowaniem bez ograniczeń. Klucz API wygenerujesz po zalogowaniu się na stronie {0}."
+        }
+      }
+    },
+    "webSearch": {
+      "provider": "Dostawca wyszukiwania internetowego",
+      "apiKey": "Klucz API",
+      "queryLanguage": "Język zapytania",
+      "queryLanguageHelp": "Język zapytania wyszukiwania. Przydatne, jeśli chcesz otrzymywać wyniki w innym języku.\nPrzy tworzeniu wniosków model AI nadal będzie używał języka interfejsu.",
+      "providers": {
+        "tavily": {
+          "help": "Podobny do Firecrawl, ale oferuje 1000 darmowych kredytów miesięcznie. Klucz API uzyskasz na stronie {0}.",
+          "advancedSearch": "Zaawansowane wyszukiwanie",
+          "advancedSearchHelp": "Zapewnia wyższej jakości wyniki wyszukiwania. Kosztuje 1 dodatkowy kredyt za każde użycie.",
+          "searchTopic": "Temat wyszukiwania",
+          "searchTopicHelp": "Optymalizuje wyszukiwanie dla wybranego tematu z dostosowanymi informacjami. Domyślnie 'ogólne'."
+        },
+        "firecrawl": {
+          "help": "Klucz API uzyskasz na stronie {0}, jeśli korzystasz z oficjalnej usługi."
+        },
+        "google-pse": {
+          "title": "Google PSE",
+          "help": "Używa Google Programmable Search Engine. Wymaga klucza API oraz identyfikatora PSE z Google Cloud Console / PSE Console. Szczegóły znajdziesz na stronie {0}.",
+          "apiKeyLabel": "Klucz API Google",
+          "apiKeyPlaceholder": "Wprowadź swój klucz API Google",
+          "pseIdLabel": "ID Programowalnej Wyszukiwarki (cx)",
+          "pseIdPlaceholder": "Wprowadź swoje ID PSE (wartość cx)"
+        }
+      },
+      "concurrencyLimitHelp": "Ogranicza liczbę równoczesnych zadań wyszukiwania. Przydatne, aby nie przeciążać dostawcy i unikać błędów.",
+      "concurrencyLimit": "Limit równoczesności",
+      "apiBase": "Bazowy URL API"
+    }
+  },
+  "researchTopic": {
+    "title": "1. Temat badań",
+    "inputTitle": "Temat badań",
+    "placeholder": "Cokolwiek chcesz zbadać...",
+    "numOfQuestions": "Liczba pytań",
+    "numOfQuestionsHelp": "Liczba dodatkowych pytań wyjaśniających.",
+    "depth": "Głębokość",
+    "depthHelp": "Liczba iteracji.",
+    "breadth": "Szerokość",
+    "breadthHelp": "Liczba wyszukiwań w pierwszej iteracji. W kolejnych iteracjach szerokość jest zmniejszana o połowę.",
+    "start": "Rozpocznij badania",
+    "researching": "Badanie..."
+  },
+  "modelFeedback": {
+    "title": "2. Informacja zwrotna od modelu",
+    "description": "AI zada Ci kilka dodatkowych pytań, aby doprecyzować kierunek badań.",
+    "waiting": "Oczekiwanie na odpowiedź modelu...",
+    "submit": "Prześlij odpowiedź",
+    "error": "Błąd podczas pobierania opinii: {0}",
+    "noQuestions": "Model nie zwrócił żadnych pytań uzupełniających."
+  },
+  "webBrowsing": {
+    "title": "3. Przeglądanie internetu",
+    "description": "AI przeszuka internet zgodnie z celem badania, powtarzając to aż do osiągnięcia zadanej głębokości.",
+    "clickToView": "Kliknij w węzeł potomny, aby zobaczyć szczegóły.",
+    "nodeDetails": "Szczegóły węzła",
+    "startNode": {
+      "description": "To początek Twojej podróży badawczej!"
+    },
+    "researchGoal": "Cel badań",
+    "visitedUrls": "Odwiedzone URL-e",
+    "learnings": "Wnioski",
+    "generating": "Generowanie...",
+    "nodeFailed": "Wyszukiwanie nie powiodło się",
+    "nodeFailedToast": "Wyszukiwanie w węźle \"{label}\" nie powiodło się",
+    "followUpQuestions": "Pytania uzupełniające",
+    "retry": "Ponów próbę",
+    "noSearchResult": "Brak wyników wyszukiwania"
+  },
+  "researchReport": {
+    "title": "4. Raport badawczy",
+    "exportPdf": "Drukuj (PDF)",
+    "exportMarkdown": "Eksportuj Markdown",
+    "sources": "Źródła",
+    "waiting": "Oczekiwanie na raport...",
+    "generating": "Generowanie raportu...",
+    "regenerate": "Wygeneruj ponownie",
+    "incompatibleBrowser": "Niekompatybilna przeglądarka",
+    "incompatibleBrowserDescription": "Twoja przeglądarka nie obsługuje tej metody drukowania. Rozważ użycie nowoczesnej przeglądarki lub eksportuj Markdown i ręcznie przekonwertuj na PDF przy użyciu np. https://md-to-pdf.fly.dev (Używaj na własne ryzyko)",
+    "exportFailed": "Eksport nie powiódł się",
+    "generateFailed": "Nie udało się wygenerować raportu: {0}"
+  },
+  "error": {
+    "requestBlockedByCORS": "Obecny dostawca API może nie zezwalać na zapytania krzyżowe (CORS). Spróbuj użyć innego dostawcy lub skontaktuj się z pomocą techniczną."
+  },
+  "autoUpdate": {
+    "newVersionTitle": "Dostępna nowa wersja: {0}",
+    "newVersionDescription": "Uwaga: jeśli korzystasz z wersji samodzielnie hostowanej, zaktualizuj ją, aby otrzymać nowe funkcje i poprawki.",
+    "refresh": "Odśwież stronę",
+    "dismiss": "Zamknij"
+  },
+  "fullscreen": "Pełny ekran",
+  "exitFullscreen": "Zakończ pełny ekran"
+}
+
